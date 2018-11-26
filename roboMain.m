@@ -6,8 +6,8 @@ global dim = 6;
 global parede = 1; 
 global ouro = 2; 
 global resplendor = 3;
-global acoesAg = {'acima', 'abaixo', 'esquerda', 'direita', 'aspirar'};
-%            1         2          3           4          5
+global acoesAg = {'acima', 'abaixo', 'esquerda', 'direita', 'coletar'};
+%                    1         2          3           4          5
 
 sala = geraAmbiente();
 mostraAmbiente(sala);
@@ -20,16 +20,16 @@ posicaoRobo(_pX, _pY);
 hold off;
 pause(1);
 
-salaSuja = sala(_pX, _pY);
-percepcao = struct('x', _pX, 'y', _pY, 'estado', salaSuja);
+estado = sala(_pX, _pY);
+percepcao = struct('x', _pX, 'y', _pY, 'estado', estado);
 contador = 0;
 
 b = 1
 while b
-    salaSuja = sala(percepcao.x, percepcao.y);
-    percepcao.estado = salaSuja;       
+    estado = sala(percepcao.x, percepcao.y);
+    percepcao.estado = estado;       
     
-    acao = agenteObjetivo(percepcao, checkObj(sala)); % 1 ta sujo
+    acao = agenteBuscaOuro(percepcao, checkObj(sala)); % 1 ta sujo
     
     if (acao == 5) 
       contador = contador + 1;
@@ -57,7 +57,3 @@ while b
       b = 0;
     endif
 end
-
-disp('contador'); 
-disp(contator); 
-

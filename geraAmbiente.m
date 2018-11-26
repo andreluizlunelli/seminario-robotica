@@ -14,7 +14,7 @@ function sala = geraAmbiente()
   for j=2:dim
     for i=2:dim
       if (sala(j,i)==ouro)
-        sala = geraResplendor(sala,j,i);                   
+        sala = geraResplendor(sala,j,i);
       endif
     endfor
   endfor
