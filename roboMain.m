@@ -9,7 +9,7 @@ global resplendor = 3;
 global acoesAg = {'acima', 'abaixo', 'esquerda', 'direita', 'coletar'};
 %                    1         2          3           4          5
 
-sala = geraAmbiente02();
+sala = geraAmbiente();
 mostraAmbiente(sala);
 
 hold on;
@@ -46,7 +46,7 @@ while b
     %posiciona o aspirador no ambiente atualizado
     posicaoRobo(percepcao.x, percepcao.y);
     hold off;
-    pause(0.7);
+    pause(2);
 
     %atualiza a percepção e o estado depois de concluir a ação    
     sala = modSala;
