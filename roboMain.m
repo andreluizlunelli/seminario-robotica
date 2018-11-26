@@ -9,12 +9,12 @@ global resplendor = 3;
 global acoesAg = {'acima', 'abaixo', 'esquerda', 'direita', 'coletar'};
 %                    1         2          3           4          5
 
-sala = geraAmbiente();
+sala = geraAmbiente02();
 mostraAmbiente(sala);
 
 hold on;
 
-_pX = 2;
+_pX = 4;
 _pY = 2;
 posicaoRobo(_pX, _pY);
 hold off;

@@ -31,6 +31,8 @@ function acao = agenteBuscaOuro(percepcao, ObjObtido, sala, j, i)
       acao = 2; % abaixo          
     elseif sala(j+1,i+1) == ouro
       acao = 10; % abaixo-direita      
+    else 
+      disp('sentiu resplendor sem ter ouro');
     endif    
   else
     b = 1;

@@ -11,7 +11,7 @@ if acao == 5 % coletar ouro
   modX = x;
   modY = y;
   
-  modSala = removeResplendor(modSala,x,y);
+  modSala = removeResplendor(modSala,x,y); % tem q ver se ta passando o xy corretamtne
   % tem q add resplendor se ainda tiver ouro adjacente
   
 else

@@ -1,18 +1,55 @@
 % Alunos: André, Karin e Simon
 % chamado pela função removeResplendor
 % pesquisar se nao adjacencias de j,i contem ouro, exceto, na celula a,b
-function b = temOuroAdjacente(sala, j,i, a,b)
+function b = temOuroAdjacente(sala, j,i)   
   
-  if j-1 != a && i-1 != b && 
+  global ouro;
   
+  sizeSala = size(sala,1);
   
-  adjacentes(1) = sala(j-1,i-1);
-  adjacentes(2) = sala(j-1,i);
-  adjacentes(3) = sala(j-1,i+1);
-  adjacentes(4) = sala(j,i-1);
-  adjacentes(5) = sala(j,i+1);
-  adjacentes(6) = sala(j+1,i-1);
-  adjacentes(7) = sala(j+1,i);
-  adjacentes(8) = sala(j+1,i+1);
-
+  if j-1 != 0 && i-1 != 0
+    if sala(j-1,i-1) == ouro | sala(j-1,i) == ouro | sala(j-1,i+1) == ouro
+      b = 1;
+    else
+      b = 0;
+    endif   
+  endif   
+  if i-1 != 0
+    if sala(j,i-1) == ouro
+      b = 1;
+    else
+      b = 0;
+    endif
+  endif
+  if i+1<=sizeSala
+    if sala(j,i+1) == ouro
+      b = 1;
+    else
+      b = 0;
+    endif
+  endif
+  if j+1<=sizeSala && i-1!=0
+    if sala(j+1,i-1) == ouro
+      b = 1;
+    else
+      b = 0;
+    endif
+  endif
+  if j+1<=sizeSala
+    if sala(j+1,i) == ouro
+      b = 1;
+    else
+      b = 0;
+    endif
+  endif
+  if j+1<=sizeSala && i+1<=sizeSala
+    if sala(j+1,i+1) == ouro
+      b = 1;
+    else
+      b = 0;
+    endif
+  else 
+    b = 0;
+  endif
+  
 endfunction
