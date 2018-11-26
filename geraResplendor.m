@@ -1,6 +1,7 @@
 % Alunos: André, Karin e Simon
 % a celula atual j,i é a celula que contem ouro
 function sala = geraResplendor(sala,j,i)
+  
   global parede;
   global ouro;
   global resplendor;

@@ -5,13 +5,14 @@ global parede;
 
 modSala = sala;
 
-if acao == 5
+if acao == 5 % coletar ouro
   modSala(x, y) = 0; %estado 0 = limpo
   %retorna as posições x e y
   modX = x;
   modY = y;
   
-  modSala = geraResplendor(sala,x,y);
+  modSala = removeResplendor(modSala,x,y);
+  % tem q add resplendor se ainda tiver ouro adjacente
   
 else
   switch acao

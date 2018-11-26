@@ -29,7 +29,7 @@ while b
     estado = sala(percepcao.x, percepcao.y);
     percepcao.estado = estado;       
     
-    acao = agenteBuscaOuro(percepcao, checkObj(sala)); % 1 ta sujo
+    acao = agenteBuscaOuro(percepcao, checkObj(sala), sala, percepcao.x, percepcao.y); % 1 ta sujo
     
     if (acao == 5) 
       contador = contador + 1;
@@ -44,7 +44,7 @@ while b
     mostraAmbiente(modSala);
     hold on;
     %posiciona o aspirador no ambiente atualizado
-    posicaoAspirador(percepcao.x, percepcao.y)
+    posicaoRobo(percepcao.x, percepcao.y)
     hold off;
     pause(0.1);
 

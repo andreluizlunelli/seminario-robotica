@@ -6,6 +6,7 @@
 %                                                                NOOP => 1:sujo 0:limpo
 
 function acao = agenteBuscaOuro(percepcao, ObjObtido, sala, j, i)
+  
   global ouro;
   global resplendor;
   
