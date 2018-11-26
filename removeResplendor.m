@@ -7,28 +7,28 @@ function sala = removeResplendor(sala, j,i)
   global parede;
   global ouro;
   
-  if temOuroAdjacente(sala,  j-1,i-1) == 0 && sala(j-1,i-1) != parede && sala(j-1,i-1) != ouro
+  if !temOuroAdjacente(sala,  j-1,i-1) && sala(j-1,i-1) != parede && sala(j-1,i-1) != ouro
     sala(j-1,i-1) = celulaVazia;
   endif
-  if temOuroAdjacente(sala,  j-1,i) == 0 && sala(j-1,i) != parede && sala(j-1,i) != ouro
+  if !temOuroAdjacente(sala,  j-1,i) && sala(j-1,i) != parede && sala(j-1,i) != ouro
     sala(j-1,i) = celulaVazia;
   endif
-  if temOuroAdjacente(sala,  j-1,i+1) == 0 && sala(j-1,i+1) != parede && sala(j-1,i+1) != ouro
+  if !temOuroAdjacente(sala,  j-1,i+1) && sala(j-1,i+1) != parede && sala(j-1,i+1) != ouro
     sala(j-1,i+1) = celulaVazia;
   endif
-  if temOuroAdjacente(sala,  j,i-1) == 0 && sala(j,i-1) != parede && sala(j,i-1) != ouro
+  if !temOuroAdjacente(sala,  j,i-1) && sala(j,i-1) != parede && sala(j,i-1) != ouro
     sala(j,i-1) = celulaVazia;
   endif
-  if temOuroAdjacente(sala,  j,i+1) == 0 && sala(j,i+1) != parede && sala(j,i+1) != ouro
+  if !temOuroAdjacente(sala,  j,i+1) && sala(j,i+1) != parede && sala(j,i+1) != ouro
     sala(j,i+1) = celulaVazia;
   endif
-  if temOuroAdjacente(sala,  j+1,i-1) == 0 && sala(j+1,i-1) != parede && sala(j+1,i-1) != ouro
+  if !temOuroAdjacente(sala,  j+1,i-1) && sala(j+1,i-1) != parede && sala(j+1,i-1) != ouro
     sala(j+1,i-1) = celulaVazia;
   endif
-  if temOuroAdjacente(sala,  j+1,i) == 0 && sala(j+1,i) != parede && sala(j+1,i) != ouro
+  if !temOuroAdjacente(sala,  j+1,i) && sala(j+1,i) != parede && sala(j+1,i) != ouro
     sala(j+1,i) = celulaVazia;
   endif
-  if temOuroAdjacente(sala,  j+1,i+1) == 0 && sala(j+1,i+1) != parede && sala(j+1,i+1) != ouro
+  if !temOuroAdjacente(sala,  j+1,i+1) && sala(j+1,i+1) != parede && sala(j+1,i+1) != ouro
     sala(j+1,i+1) = celulaVazia;
   endif      
     

@@ -2,6 +2,7 @@
 function [modSala, modX, modY] = atualizaAmbiente(sala, acao, x, y)
 
 global parede;
+global resplendor;
 
 modSala = sala;
 
@@ -12,7 +13,12 @@ if acao == 5 % coletar ouro
   modY = y;
   
   modSala = removeResplendor(modSala,x,y); % tem q ver se ta passando o xy corretamtne
+  
   % tem q add resplendor se ainda tiver ouro adjacente
+  
+  if temOuroAdjacente(modSala,x,y)
+    modSala(x,y) = resplendor;
+  endif
   
 else
   switch acao

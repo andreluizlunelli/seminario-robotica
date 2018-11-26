@@ -44,9 +44,9 @@ while b
     mostraAmbiente(modSala);
     hold on;
     %posiciona o aspirador no ambiente atualizado
-    posicaoRobo(percepcao.x, percepcao.y)
+    posicaoRobo(percepcao.x, percepcao.y);
     hold off;
-    pause(0.1);
+    pause(0.7);
 
     %atualiza a percepção e o estado depois de concluir a ação    
     sala = modSala;

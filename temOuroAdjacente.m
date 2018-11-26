@@ -10,6 +10,7 @@ function b = temOuroAdjacente(sala, j,i)
   if j-1 != 0 && i-1 != 0
     if sala(j-1,i-1) == ouro | sala(j-1,i) == ouro | sala(j-1,i+1) == ouro
       b = 1;
+      return;
     else
       b = 0;
     endif   
@@ -17,6 +18,7 @@ function b = temOuroAdjacente(sala, j,i)
   if i-1 != 0
     if sala(j,i-1) == ouro
       b = 1;
+      return;
     else
       b = 0;
     endif
@@ -24,6 +26,7 @@ function b = temOuroAdjacente(sala, j,i)
   if i+1<=sizeSala
     if sala(j,i+1) == ouro
       b = 1;
+      return;
     else
       b = 0;
     endif
@@ -31,13 +34,15 @@ function b = temOuroAdjacente(sala, j,i)
   if j+1<=sizeSala && i-1!=0
     if sala(j+1,i-1) == ouro
       b = 1;
+      return;
     else
       b = 0;
     endif
   endif
   if j+1<=sizeSala
     if sala(j+1,i) == ouro
-      b = 1;
+      b = 1; % aqui tem que add alguma instrução de return
+      return;
     else
       b = 0;
     endif
@@ -45,6 +50,7 @@ function b = temOuroAdjacente(sala, j,i)
   if j+1<=sizeSala && i+1<=sizeSala
     if sala(j+1,i+1) == ouro
       b = 1;
+      return;
     else
       b = 0;
     endif
