@@ -5,7 +5,7 @@ function sala = geraAmbiente()
   global parede; 
   global ouro; 
 
-  sala = (rand(dim, dim)>0.6)*ouro;
+  sala = (rand(dim, dim)>0.8)*ouro;
   sala(1, :) = parede; 
   sala(end, :) = parede;
   sala(:, 1) = parede;

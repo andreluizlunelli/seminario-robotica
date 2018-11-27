@@ -4,8 +4,8 @@ clear all;clc; close all;
 global celulaVazia = 0;
 global dim = 6;
 global parede = 1; 
-global ouro = 2; 
-global resplendor = 3;
+global ouro = 3; 
+global resplendor = 2;
 global acoesAg = {'acima', 'abaixo', 'esquerda', 'direita', 'coletar'};
 %                    1         2          3           4          5
 
@@ -14,7 +14,7 @@ mostraAmbiente(sala);
 
 hold on;
 
-_pX = 4;
+_pX = 2;
 _pY = 2;
 posicaoRobo(_pX, _pY);
 hold off;
@@ -46,7 +46,7 @@ while b
     %posiciona o aspirador no ambiente atualizado
     posicaoRobo(percepcao.x, percepcao.y);
     hold off;
-    pause(2);
+    pause(0.5);
 
     %atualiza a percepção e o estado depois de concluir a ação    
     sala = modSala;
