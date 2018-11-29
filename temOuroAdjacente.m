@@ -8,7 +8,7 @@ function b = temOuroAdjacente(sala, j,i)
   sizeSala = size(sala,1);
   
   if j-1 != 0 && i-1 != 0 && j+1<=sizeSala && i+1<=sizeSala
-    if sala(j-1,i-1) == ouro | sala(j-1,i) == ouro | sala(j-1,i+1) == ouro
+    if sala(j-1,i-1) == ouro || sala(j-1,i) == ouro || sala(j-1,i+1) == ouro
       b = 1;
       return;
     else

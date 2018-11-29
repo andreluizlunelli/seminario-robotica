@@ -6,6 +6,9 @@ global resplendor;
 
 modSala = sala;
 
+modX = x;
+modY = y;
+
 if acao == 5 % coletar ouro
   modSala(x, y) = 0; %estado 0 = limpo
   %retorna as posições x e y
